@@ -10,10 +10,11 @@ export interface IComputer {
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ]
 })
+
 export class AppComponent  {
 
   computers: IComputer[] = [{
-    type: 'desktop',
+    type: 'laptop',
     department: 'Head Office',
     description: 'For the General Manager'
   }];

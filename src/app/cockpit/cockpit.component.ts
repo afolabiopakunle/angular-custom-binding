@@ -25,7 +25,7 @@ export class CockpitComponent implements OnInit {
   }
   
   addLaptop(){
-    this.createDesktop.emit({
+    this.createLaptop.emit({
       department: this.newPCDepartment,
       description: this.newPCDescription
     })
