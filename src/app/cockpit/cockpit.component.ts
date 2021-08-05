@@ -8,6 +8,7 @@ import { IComputer } from '../app.component';
 })
 export class CockpitComponent implements OnInit {
   @Output() createDesktop = new EventEmitter<IComputer>();
+  @Output() createLaptop = new EventEmitter<IComputer>();
 
   newPCDepartment;
   newPCDescription;
@@ -23,6 +24,11 @@ export class CockpitComponent implements OnInit {
     })
   }
   
-  addLaptop(){}
+  addLaptop(){
+    this.createDesktop.emit({
+      department: this.newPCDepartment,
+      description: this.newPCDescription
+    })
+  }
 
 }

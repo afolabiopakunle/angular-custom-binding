@@ -25,4 +25,12 @@ export class AppComponent  {
       description: pcData.description
     })
   }
+
+  onCreateLaptop(pcData: IComputer) {
+    this.computers.push({
+      type: 'laptop',
+      department: pcData.department,
+      description: pcData.description
+    })
+  }
 }
