@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IComputer } from '../app.component';
 
 @Component({
   selector: 'app-display',
   templateUrl: './display.component.html',
-  styleUrls: ['./display.component.css']
 })
 export class DisplayComponent implements OnInit {
-  pc;
+  @Input() computer: IComputer;
   
   constructor() { }
 
