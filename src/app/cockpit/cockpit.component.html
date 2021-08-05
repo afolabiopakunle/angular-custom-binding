@@ -1,16 +1,16 @@
 <div class="row">
   <div class="col-sm-12">
-    <p>Add new Servers or blueprints!</p>
-    <label>Server Name</label>
-    <input type="text" class="form-control" [(ngModel)]="newPCName">
+    <p>Add New Desktop or Laptop!</p>
+    <label>Department</label>
+    <input type="text" class="form-control" [(ngModel)]="newPCDepartment">
     <label>Server Content</label>
     <input type="text" class="form-control" [(ngModel)]="newPCDescription">
     <br>
     <button
-      class="btn btn-primary"
+      class="btn btn-primary mr-3"
       (click)="addDesktop()">Add Desktop</button>
     <button
-      class="btn btn-primary"
+      class="btn btn-info"
       (click)="addLaptop()">Add Laptop</button>
   </div>
 </div>

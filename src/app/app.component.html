@@ -1,5 +1,5 @@
 <div class="container">
-<app-cockpit></app-cockpit>
+<app-cockpit (createDesktop)="onCreateDesktop($event)"></app-cockpit>
 <hr>
-<app-display></app-display>
+<app-display *ngFor="let computer of computers"></app-display>
 </div>

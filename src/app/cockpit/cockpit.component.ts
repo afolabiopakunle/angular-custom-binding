@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { IComputer } from '../app.component';
 
 @Component({
   selector: 'app-cockpit',
@@ -6,14 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cockpit.component.css']
 })
 export class CockpitComponent implements OnInit {
-  newPCName;
+  @Output() createDesktop = new EventEmitter<IComputer>();
+
+  newPCDepartment;
   newPCDescription;
   constructor() { }
 
   ngOnInit() {
   }
 
-  addDesktop(){}
+  addDesktop(){
+    this.createDesktop.emit({
+      department: this.newPCDepartment,
+      description: this.newPCDescription
+    })
+  }
+  
   addLaptop(){}
 
 }

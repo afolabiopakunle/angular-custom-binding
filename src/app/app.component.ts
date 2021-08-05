@@ -1,7 +1,7 @@
 import { Component, VERSION } from '@angular/core';
 
 export interface IComputer {
-  type: string,
+  type?: string,
   department: string,
   description: string,
 }
@@ -11,7 +11,18 @@ export interface IComputer {
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  computers:[];
-  newServerName;
-  newServerContent;
+
+  computers: IComputer[] = [{
+    type: 'desktop',
+    department: 'Head Office',
+    description: 'For the General Manager'
+  }];
+
+  onCreateDesktop(pcData: IComputer) {
+    this.computers.push({
+      type: 'desktop',
+      department: pcData.department,
+      description: pcData.description
+    })
+  }
 }
